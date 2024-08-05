@@ -1,0 +1,152 @@
+syntax = "proto3";
+
+option go_package = "github.com/phthaocse/protobuf_json";
+
+message TestVarInt {
+  int64 id =1;
+  sint32 number = 2;
+  string str = 3;
+  string str2 = 4;
+
+}
+
+message Location {
+  double lat = 1;
+  double long = 2;
+  string cell_code = 3;
+  string place_id = 4;
+  int32 trust_level = 5;
+  string wardcode = 6;
+}
+
+message Item {
+  string name = 1;
+  string code = 2;
+  int32 quantity = 3;
+  int32 price = 4;
+  int32 length = 5;
+  int32 width = 6;
+  int32 height = 7;
+  string category_level1 = 8;
+  string category_level2 = 9;
+  string category_level3 = 10;
+  int32 weight = 11;
+  repeated string image_ids = 12;
+  string status = 13;
+  string item_order_code = 14;
+}
+
+message ExtraService {
+  bool document_return_flag = 1;
+  bool double_check = 2;
+}
+
+message Data {
+  string ahamove_seller_address_detail = 1;
+  string ahamove_recipient_address_detail = 2;
+  int32 province_id = 3;
+  string ahamove_order_code = 4;
+}
+
+message ShippingOrder {
+  string _id = 1;
+  int32 shop_id = 2;
+  int32 client_id = 3;
+  string return_name = 4;
+  string return_phone = 5;
+  string return_address = 6;
+  string return_ward_code = 7;
+  int32 return_district_id = 8;
+  Location return_location = 9;
+  string from_name = 10;
+  string from_phone = 11;
+  string from_hotline = 12;
+  string from_address = 13;
+  string from_ward_code = 14;
+  int32 from_district_id = 15;
+  Location from_location = 16;
+  int32 deliver_station_id = 17;
+  string to_name = 18;
+  string to_phone = 19;
+  string to_address = 20;
+  string to_ward_code = 21;
+  int32 to_district_id = 22;
+  Location to_location = 23;
+  int32 weight = 24;
+  int32 length = 25;
+  int32 width = 26;
+  int32 height = 27;
+  int32 converted_weight = 28;
+  int32 calculate_weight = 29;
+  string image_ids = 30;
+  int32 service_type_id = 31;
+  int32 service_id = 32;
+  int32 payment_type_id = 33;
+  repeated int32 payment_type_ids = 34;
+  int32 custom_service_fee = 35;
+  string sort_code = 36;
+  int32 cod_amount = 37;
+  bool is_cod_transferred = 38;
+  bool is_cod_collected = 39;
+  int32 insurance_value = 40;
+  int32 order_value = 41;
+  int32 pick_station_id = 42;
+  string client_order_code = 43;
+  int32 cod_failed_amount = 44;
+  string cod_failed_collect_date = 45;
+  string required_note = 46;
+  string content = 47;
+  string note = 48;
+  string employee_note = 49;
+  string seal_code = 50;
+  string pickup_time = 51;
+  repeated Item items = 52;
+  string coupon = 53;
+  int32 coupon_campaign_id = 54;
+  string order_code = 55;
+  string version_no = 56;
+  string updated_ip = 57;
+  int32 updated_employee = 58;
+  int32 updated_client = 59;
+  string updated_source = 60;
+  string updated_date = 61;
+  int32 updated_warehouse = 62;
+  string created_ip = 63;
+  int32 created_employee = 64;
+  int32 created_client = 65;
+  string created_source = 66;
+  string created_date = 67;
+  string status = 68;
+  string internal_process_status = 69;
+  string internal_process_type = 70;
+  int32 pick_warehouse_id = 71;
+  int32 deliver_warehouse_id = 72;
+  int32 current_warehouse_id = 73;
+  int32 return_warehouse_id = 74;
+  int32 next_warehouse_id = 75;
+  int32 current_transport_warehouse_id = 76;
+  string leadtime = 77;
+  string order_date = 78;
+  Data data = 79;
+  string action = 80;
+  string soc_id = 81;
+  repeated string tag = 82;
+  bool legacy = 83;
+  bool is_partial_return = 84;
+  bool is_document_return = 85;
+  string updated_date_pick_shift = 86;
+  string updated_date_deliver_shift = 87;
+  string updated_date_return_shift = 88;
+  repeated string transaction_ids = 89;
+  string transportation_status = 90;
+  string transportation_phase = 91;
+  ExtraService extra_service = 92;
+  string config_fee_id = 93;
+  string extra_cost_id = 94;
+  string standard_config_fee_id = 95;
+  string standard_extra_cost_id = 96;
+  string operation_partner = 97;
+  string type_order = 98;
+  string type_order_code = 99;
+  string updated_time = 100;
+}
